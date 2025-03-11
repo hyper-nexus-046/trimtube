@@ -19,7 +19,7 @@ import {
 export const createTable = pgTableCreator((name) => `trimtube_${name}`);
 
 export const posts = createTable(
-  "post",
+  "posts",
   {
     id: integer("id").primaryKey().generatedByDefaultAsIdentity(),
     name: varchar("name", { length: 256 }),
