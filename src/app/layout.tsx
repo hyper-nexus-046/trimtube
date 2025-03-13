@@ -1,3 +1,4 @@
+import { PostHogProvider } from "./_analytics/provider";
 import "~/styles/globals.css";
 
 import { GeistSans } from "geist/font/sans";
@@ -13,12 +14,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+  modal,
+}: Readonly<{ children: React.ReactNode; modal: React.ReactNode }>) {
   return (
     <ClerkProvider>
-      <html lang="en" className={`${GeistSans.variable}`}>
-        <body>{children}</body>
-      </html>
+      <PostHogProvider>
+        <html lang="en" className={`${GeistSans.variable} dark`}>
+          <body>
+            {children}
+            {modal}
+            <div id="modal-root" />
+          </body>
+        </html>
+      </PostHogProvider>
     </ClerkProvider>
   );
 }
