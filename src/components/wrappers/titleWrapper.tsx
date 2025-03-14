@@ -40,7 +40,7 @@ export const TitledWrapper = forwardRef<
     <div
       ref={ref}
       className={cn(
-        "max-w-sub-container px-content-sm lg:px-content relative mx-auto size-full space-y-[clamp(0.8rem,2vw,2.05rem)] overflow-x-clip",
+        "relative mx-auto size-full max-w-sub-container space-y-[clamp(0.8rem,2vw,2.05rem)] overflow-x-clip px-content-sm lg:px-content",
         isMax && "!max-w-container",
         className,
       )}
@@ -49,7 +49,7 @@ export const TitledWrapper = forwardRef<
         {sectionName && (
           <span
             className={cn(
-              "text-paragraph-section mx-auto py-10 tracking-wider",
+              "mx-auto py-10 text-paragraph-section tracking-wider",
             )}
           >
             {sectionName}
@@ -58,7 +58,7 @@ export const TitledWrapper = forwardRef<
         {title && (
           <Heading
             className={cn(
-              "max-w-para-lg text-heading-h3 mx-auto font-bold",
+              "mx-auto max-w-para-lg text-heading-h3 font-bold",
               longTitle && "max-w-para-xl",
               titleClasses,
             )}
@@ -70,7 +70,7 @@ export const TitledWrapper = forwardRef<
         {para && (
           <p
             className={cn(
-              "max-w-para text-paragraph-section mx-auto text-secondary-foreground",
+              "mx-auto max-w-para text-paragraph-section text-secondary-foreground",
               paraClasses,
             )}
           >

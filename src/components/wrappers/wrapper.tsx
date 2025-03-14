@@ -12,7 +12,7 @@ export const Wrapper = ({
   return (
     <div
       className={cn(
-        "max-w-container px-content-sm lg:px-content mx-auto",
+        "mx-auto max-w-container px-content-sm lg:px-content",
         className,
       )}
     >
