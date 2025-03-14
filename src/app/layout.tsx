@@ -1,14 +1,15 @@
 import { PostHogProvider } from "./_analytics/provider";
 import "~/styles/globals.css";
 
-import { GeistSans } from "geist/font/sans";
+import { fontInter, fontMono } from "~/lib/fonts";
 import { type Metadata } from "next";
-
+import { siteConfig } from "~/config/site";
 import { ClerkProvider } from "@clerk/nextjs";
+import { cn } from "~/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Trimtube",
-  description: "Trimtube",
+  title: siteConfig.title,
+  description: siteConfig.description,
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
@@ -19,7 +20,16 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <PostHogProvider>
-        <html lang="en" className={`${GeistSans.variable} dark`}>
+        <html
+          lang="en"
+          className={cn(
+            "font-inter relative antialiased",
+            fontInter.className,
+            fontInter.variable,
+            fontMono.variable,
+            "dark",
+          )}
+        >
           <body>
             {children}
             {modal}
