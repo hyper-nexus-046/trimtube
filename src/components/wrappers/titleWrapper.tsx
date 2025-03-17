@@ -10,6 +10,7 @@ export const TitledWrapper = forwardRef<
     spanText?: string;
     headingLevel?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
     sectionName?: string;
+    sectionIcon?: ReactNode;
     para?: string | ReactNode;
     children: ReactNode | ReactNode[];
     className?: string;
@@ -25,6 +26,7 @@ export const TitledWrapper = forwardRef<
     spanText,
     headingLevel = "h2",
     sectionName,
+    sectionIcon,
     para,
     children,
     className,
@@ -47,18 +49,19 @@ export const TitledWrapper = forwardRef<
     >
       <header className={cn("space-y-4 text-center", headerClasses)}>
         {sectionName && (
-          <span
+          <div
             className={cn(
-              "mx-auto py-10 text-paragraph-section tracking-wider",
+              "mx-auto flex w-fit items-center gap-2 rounded-lg border border-border bg-[#0d0d0d] p-2.5 text-sm",
             )}
           >
+            {sectionIcon && sectionIcon}
             {sectionName}
-          </span>
+          </div>
         )}
         {title && (
           <Heading
             className={cn(
-              "mx-auto max-w-para-lg text-heading-h3 font-bold",
+              "mx-auto max-w-para-lg text-heading-h3 font-semibold",
               longTitle && "max-w-para-xl",
               titleClasses,
             )}
@@ -70,7 +73,7 @@ export const TitledWrapper = forwardRef<
         {para && (
           <p
             className={cn(
-              "mx-auto max-w-para text-paragraph-section text-secondary-foreground",
+              "mx-auto max-w-para text-paragraph-section text-muted-foreground",
               paraClasses,
             )}
           >

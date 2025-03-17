@@ -1,0 +1,97 @@
+===============================================================
+======= PROJECT SETUP & NEW PACKAGE INSTALLATION GUIDES =======
+===============================================================
+
+Node Version : v20.16.0
+pnpm Version : 10.6.2
+
+What is pnpm?
+pnpm is a package manager that provides a fast, disk space efficient, and secure way to manage dependencies for your projects.
+
+Steps To Install pnpm in wsl (ubuntu):
+    1- sudo npm install -g pnpm
+
+pnpm install
+pnpm install <package-name>
+
+Notes:
+    1- Always use `pnpm` instead of `npm`
+    2- Always install new packages using `pnpm install <package-name>`
+    3- Always use `pnpm run <script-name>` instead of `npm run <script-name>`
+
+
+==============================
+======= DESIGN GUIDES ========
+==============================
+
+Text Colors:
+
+1- Paragrapgh Section
+
+Description:
+This is the main/first section of any headings like paragraphs under the TitleWrapper.
+
+For example:
+Visit https://radison.framer.website this website's "hero" section, The paragraphs under the feature title will be "text-secondary-foreground". 
+
+
+Color: text-secondary-foreground
+
+
+2- Inner Paragrapghs
+
+Description:
+This is the inner section of any headings like text in feature section and etc.
+
+For example:
+Visit https://radison.framer.website this website's "Process" section, The paragraphs under the feature title will be "text-muted-foreground". 
+
+Color: text-muted-foreground
+
+
+3- Title
+
+Description:
+Any headings like titles, sub-titles or any page or section title.
+
+Color: text-foreground
+
+
+
+==============================
+====== CODEBASE GUIDES =======
+==============================
+
+- src
+    - app (This is our main app directory where all the routes and page files are created)
+        - page.tsx (This is our home page)
+        - layout.tsx (This is our main layout file)
+    - components (This is our main components directory where all the components are created, the sub folder are just like the InterviewPal Project)
+    - content (This is our main content directory where all the content files are created, the sub folder are just like the InterviewPal Project)
+    - public (This is our main public directory where all the public files are created, the sub folder are just like the InterviewPal Project)
+
+Notes:
+
+1- Whenever we create a new file in either jsonFiles or tsFiles folder that needs to be export from their folder's index.ts file (just like we do for icons).
+2- Whenever we create a file or a folder we will use "-" to separate words (NO CAMEL CASE FOR FILES AND FOLDERS).
+
+
+
+==============================
+========= GIT GUIDES =========
+==============================
+
+1- Commit Message Format
+
+[Task Name] - [Task Description]
+
+Example:
+
+"[Hero Section] - Created Hero Component For Home page using TitleWrapper component"
+
+2- Branch Name : dev_malay
+3- Always Create Pull Request from your branch to the dev branch once you are done with your task
+4- Add the PR URL to the Jira ticket.
+5- Commit Tests
+    - To auto fix formatting issues run `pnpm run format:write`
+    - To auto fix linting issues run `pnpm run lint:fix`

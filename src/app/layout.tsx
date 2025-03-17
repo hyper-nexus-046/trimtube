@@ -6,6 +6,7 @@ import { type Metadata } from "next";
 import { siteConfig } from "~/config/site";
 import { ClerkProvider } from "@clerk/nextjs";
 import { cn } from "~/lib/utils";
+import { TailwindIndicator } from "~/components/ui/tailwind-indicator";
 
 export const metadata: Metadata = {
   title: siteConfig.title,
@@ -33,7 +34,7 @@ export default function RootLayout({
           <body>
             {children}
             {modal}
-            <div id="modal-root" />
+            <TailwindIndicator />
           </body>
         </html>
       </PostHogProvider>
