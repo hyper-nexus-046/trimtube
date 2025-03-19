@@ -51,7 +51,7 @@ export const TitledWrapper = forwardRef<
         {sectionName && (
           <div
             className={cn(
-              "mx-auto flex w-fit items-center gap-2 rounded-lg border border-border bg-[#0d0d0d] p-2.5 text-sm",
+              "mx-auto flex w-fit items-center gap-2 rounded-md border border-border bg-[#0d0d0d] px-5 py-[6px] text-sm",
             )}
           >
             {sectionIcon && sectionIcon}
@@ -73,7 +73,7 @@ export const TitledWrapper = forwardRef<
         {para && (
           <p
             className={cn(
-              "mx-auto max-w-para text-paragraph-section text-muted-foreground",
+              "mx-auto max-w-para text-paragraph-section text-secondary-foreground",
               paraClasses,
             )}
           >
