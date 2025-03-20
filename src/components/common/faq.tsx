@@ -53,7 +53,7 @@ export const Faq = ({
                 className="border-none px-4"
                 value={String(item.id)}
               >
-                <AccordionTrigger className="text-base lg:text-[18px]">
+                <AccordionTrigger className="text-sm lg:text-[18px]">
                   {item.question}
                 </AccordionTrigger>
                 <AccordionContent className="leading-6 text-secondary-foreground lg:text-base">
@@ -63,7 +63,7 @@ export const Faq = ({
             </Card>
           ))}
         </Accordion>
-        <div className="absolute inset-0 z-10 mx-auto w-[85%] bg-[url('/common/faq-overlay-elipse.svg')] bg-cover bg-center opacity-15 blur-xl" />
+        <div className="absolute inset-0 z-10 mx-auto w-[85%] bg-[url('/common/faq-overlay-elipse.svg')] bg-cover bg-center opacity-15 blur-2xl" />
       </div>
     </TitledWrapper>
   );
