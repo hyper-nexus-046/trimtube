@@ -1,34 +1,36 @@
-import { PostHogProvider } from "./_analytics/provider";
-import "~/styles/globals.css";
+import { PostHogProvider } from './_analytics/provider'
 
-import { fontInter, fontMono } from "~/lib/fonts";
-import { type Metadata } from "next";
-import { siteConfig } from "~/config/site";
-import { ClerkProvider } from "@clerk/nextjs";
-import { cn } from "~/lib/utils";
-import { TailwindIndicator } from "~/components/ui/tailwind-indicator";
+import '~/styles/globals.css'
+
+import { type Metadata } from 'next'
+import { ClerkProvider } from '@clerk/nextjs'
+
+import { siteConfig } from '~/config/site'
+import { fontInter, fontMono } from '~/lib/fonts'
+import { cn } from '~/lib/utils'
+import { TailwindIndicator } from '~/components/ui/tailwind-indicator'
 
 export const metadata: Metadata = {
   title: siteConfig.title,
   description: siteConfig.description,
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
-};
+  icons: [{ rel: 'icon', url: '/favicon.ico' }]
+}
 
 export default function RootLayout({
   children,
-  modal,
+  modal
 }: Readonly<{ children: React.ReactNode; modal: React.ReactNode }>) {
   return (
     <ClerkProvider>
       <PostHogProvider>
         <html
-          lang="en"
+          lang='en'
           className={cn(
-            "font-inter relative antialiased",
+            'font-inter relative antialiased',
             fontInter.className,
             fontInter.variable,
             fontMono.variable,
-            "dark",
+            'dark'
           )}
         >
           <body>
@@ -39,5 +41,5 @@ export default function RootLayout({
         </html>
       </PostHogProvider>
     </ClerkProvider>
-  );
+  )
 }
