@@ -1,22 +1,22 @@
-import { type ReactNode } from "react";
+import { type ReactNode } from 'react'
 
-import { cn } from "~/lib/utils";
+import { cn } from '~/lib/utils'
 
 export const Wrapper = ({
   children,
-  className,
+  className
 }: Readonly<{
-  children?: ReactNode | ReactNode[];
-  className?: string;
+  children?: ReactNode | ReactNode[]
+  className?: string
 }>) => {
   return (
     <div
       className={cn(
-        "mx-auto max-w-container px-content-sm lg:px-content",
-        className,
+        'mx-auto max-w-container px-content-sm lg:px-content',
+        className
       )}
     >
       {children}
     </div>
-  );
-};
+  )
+}

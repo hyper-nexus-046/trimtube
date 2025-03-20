@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "question": "What are AI development services?",
+        "answer": "At their core, Artificial Intelligence (AI) development services revolve around designing and tailoring artificial intelligence solutions to meet specific business needs. It’s akin to architects and builders coming together; while the fundamental principles remain consistent, the final outcome is custom-built to fit an individual's requirements. So, when we discuss AI development, we’re delving into specialized domains—like machine learning, natural language processing, or computer vision—each designed to address unique challenges in analytics, communication, or data interpretation."
+    },
+    {
+        "id": 2,
+        "question": "What types of processes can be automated using AI?",
+        "answer": "AI can automate a wide range of tasks, from data entry and customer support to decision-making and workflow optimization. We tailor solutions based on your business needs, whether it’s automating routine operations or more complex tasks."
+    },
+    {
+        "id": 3,
+        "question": "How long does it take to implement AI automation?",
+        "answer": "The timeline varies depending on the complexity of your business needs. On average, it takes a few weeks for smaller projects, while more complex implementations can take several months. We’ll provide a detailed timeline during our consultation."
+    },
+    {
+        "id": 4,
+        "question": "Will AI automation disrupt my current operations?",
+        "answer": "We aim to minimize any disruption to your business. Our team works closely with you to ensure the integration is seamless, and we handle the entire process, including testing and troubleshooting, to avoid downtime."
+    },
+    {
+        "id": 5,
+        "question": "How much does AI automation cost?",
+        "answer": "The cost depends on the complexity of the solution and the scope of automation required. We offer flexible pricing options tailored to your business needs, which will be discussed during the initial consultation."
+    }
+]

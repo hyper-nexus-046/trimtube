@@ -1,11 +1,11 @@
-import { Ratelimit } from "@upstash/ratelimit";
-import { Redis } from "@upstash/redis";
+import { Ratelimit } from '@upstash/ratelimit'
+import { Redis } from '@upstash/redis'
 
 export const ratelimit = new Ratelimit({
   redis: Redis.fromEnv(),
   analytics: true,
-  limiter: Ratelimit.slidingWindow(10, "10 s"),
-});
+  limiter: Ratelimit.slidingWindow(10, '10 s')
+})
 
 // Useage
 // Use a constant string to limit all requests with a single ratelimit

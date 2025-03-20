@@ -1,3 +1,3 @@
-export * from "./wrapper";
-export * from "./pageWrapper";
-export * from "./titleWrapper";
+export * from './wrapper'
+export * from './page-wrapper'
+export * from './title-wrapper'
