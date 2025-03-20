@@ -7,7 +7,7 @@ import { Footer } from "~/components/common/footer";
 export const PageWrapper = ({
   children,
   showCta = true,
-  showFooter = false,
+  showFooter = true,
   className,
 }: {
   children: ReactNode;
