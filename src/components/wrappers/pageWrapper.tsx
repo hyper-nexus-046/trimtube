@@ -1,9 +1,25 @@
-import type { ReactNode } from "react";
+import React, { type ReactNode } from "react";
+
+import { cn } from "~/lib/utils";
+import { BottomCta } from "~/components/common/bottom-cta";
+import { Footer } from "~/components/common/footer";
 
 export const PageWrapper = ({
   children,
-}: Readonly<{
+  showCta = true,
+  showFooter = true,
+  className,
+}: {
   children: ReactNode;
-}>) => {
-  return <>{children}</>;
+  showCta?: boolean;
+  showFooter?: boolean;
+  className?: string;
+}) => {
+  return (
+    <main className={cn(className)}>
+      {children}
+      {showCta && <BottomCta />}
+      {showFooter && <Footer />}
+    </main>
+  );
 };
