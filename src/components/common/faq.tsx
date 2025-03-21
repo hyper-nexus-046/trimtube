@@ -12,7 +12,7 @@ export const Faq = ({
   title = '',
   description = '',
   data,
-  className = 'mb-content-lg',
+  className = 'my-content-lg',
   classTitle,
   classPara,
   accordClass,
@@ -48,7 +48,7 @@ export const Faq = ({
           className={cn('relative z-30', accordClass)}
         >
           {data.map(item => (
-            <Card className='mb-4 bg-[rgba(255,255,255,0.06)]' key={item.id}>
+            <Card className='lower-opacity-background mb-4' key={item.id}>
               <AccordionItem
                 className='border-none px-4'
                 value={String(item.id)}
@@ -56,7 +56,7 @@ export const Faq = ({
                 <AccordionTrigger className='text-sm lg:text-[18px]'>
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent className='leading-6 text-secondary-foreground lg:text-base'>
+                <AccordionContent className='leading-6 text-muted-foreground lg:text-base'>
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>
