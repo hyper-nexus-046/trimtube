@@ -18,7 +18,7 @@ export const Testimonials = () => {
         {TestimonialsData.map((testimonial, index) => (
           <Card
             key={index}
-            className='lower-opacity-background relative overflow-hidden rounded-[30px] border-secondary text-muted-foreground'
+            className='relative overflow-hidden rounded-[30px] border-secondary text-muted-foreground'
           >
             <CardContent className='flex h-full flex-col gap-5 p-5'>
               <div className='flex-1'>
