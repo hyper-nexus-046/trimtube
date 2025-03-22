@@ -36,7 +36,7 @@ export const Working = () => {
                   <div className='w-3 h-3 bg-yellow-500 rounded-full'></div>
                   <div className='w-3 h-3 bg-green-500 rounded-full'></div>
                 </div>
-                <div className='h-44 relative'>
+                <div className='h-36 relative'>
                   <div
                     className='absolute inset-0'
                     style={{
