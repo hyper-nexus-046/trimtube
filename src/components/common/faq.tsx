@@ -12,7 +12,7 @@ export const Faq = ({
   title = '',
   description = '',
   data,
-  className = 'my-content-lg',
+  className = 'mb-content-lg',
   classTitle,
   classPara,
   accordClass,

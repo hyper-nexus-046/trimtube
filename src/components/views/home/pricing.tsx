@@ -51,7 +51,7 @@ export const Pricing = () => {
         {pricingPlans.map((plan, index) => (
           <Card
             key={index}
-            className='rounded-[30px] border-secondary text-muted-foreground'
+            className='rounded-[30px] text-muted-foreground'
             style={{
               background:
                 'linear-gradient(149deg, rgba(81,47,235,0.15) 0%, rgba(255,255,255,0.06) 29%, rgba(255,255,255,0.06) 74%, rgba(81,47,235,0.15) 100%)'
@@ -72,7 +72,9 @@ export const Pricing = () => {
                   : isAnnualy
                     ? plan.annualy
                     : plan.monthly}
-                <span>{!plan.custom && '/month'}</span>
+                <span className='text-sm tracking-wider font-normal'>
+                  {!plan.custom && '/month'}
+                </span>
               </p>
               <p>{plan.description}</p>
               <div className='pt-4'>
