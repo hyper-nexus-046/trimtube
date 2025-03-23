@@ -33,35 +33,6 @@ export const siteConfig = {
     },
     {
       id: 3,
-      title: 'Resources',
-      href: '/',
-      type: 'dropdown',
-      pages: [
-        {
-          id: 1,
-          title: 'Blog',
-          href: '/blog',
-          pages: []
-        },
-        {
-          id: 2,
-          title: 'Integrations',
-          href: '/integrations',
-          pages: []
-        },
-        {
-          id: 3,
-          title: 'FAQ',
-          href: '/faq',
-          pages: []
-        }
-      ],
-      group: 'Company',
-      variant: 'list',
-      forHeader: true
-    },
-    {
-      id: 4,
       title: 'Pricing',
       href: '/pricing',
       type: 'link',
@@ -70,7 +41,7 @@ export const siteConfig = {
       forHeader: false
     },
     {
-      id: 6,
+      id: 4,
       title: 'Privacy Policy',
       href: '/privacy',
       type: 'link',
