@@ -1,5 +1,7 @@
 'use client'
 
+import Link from 'next/link'
+
 import { cn } from '~/lib/utils'
 import { Button } from '~/components/ui/button'
 
@@ -12,11 +14,15 @@ export const AuthButtons = ({
 }) => {
   return (
     <div className={cn(className, 'flex gap-2')}>
-      <Button variant='link' className={cn(signInClass, 'text-foreground')}>
-        Sign in
+      <Button
+        variant='link'
+        asChild
+        className={cn(signInClass, 'text-foreground')}
+      >
+        <Link href='/signin'>Sign in</Link>
       </Button>
-      <Button className='px-3' variant='default'>
-        Get Started
+      <Button className='px-3' variant='default' asChild>
+        <Link href='/signup'>Get Started</Link>
       </Button>
     </div>
   )

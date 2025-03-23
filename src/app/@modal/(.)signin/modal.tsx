@@ -19,13 +19,13 @@ export function Modal({ children }: { children: React.ReactNode }) {
 
   return (
     <Dialog defaultOpen={true} open={true} onOpenChange={onDismiss}>
-      <DialogContent className='max-w-[75%] bg-red-500 p-5'>
+      <DialogContent className='max-w-[75%] p-5'>
         <DialogHeader className='space-y-2'>
           <DialogTitle className='sr-only text-heading-h7 font-bold'>
             Login
           </DialogTitle>
           <DialogDescription className='sr-only text-sm text-secondary-foreground'>
-            asdfasdf
+            Login
           </DialogDescription>
         </DialogHeader>
 
@@ -34,6 +34,9 @@ export function Modal({ children }: { children: React.ReactNode }) {
             <div className='flex flex-1 items-center justify-center'>
               <div className='w-full max-w-xs'>{children}</div>
             </div>
+          </div>
+          <div className='bg-red-500 size-full'>
+            Junaid is the best man alive
           </div>
         </div>
       </DialogContent>
