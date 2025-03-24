@@ -1,4 +1,4 @@
-import { Card, CardContent } from '~/components/ui/card'
+import { Card, CardContent, CardHeader } from '~/components/ui/card'
 import { TitledWrapper } from '~/components/wrappers'
 
 export const Working = () => {
@@ -29,7 +29,7 @@ export const Working = () => {
           }
         ].map((feature, index) => (
           <Card key={index} className='rounded-[30px]'>
-            <CardContent className='text-foreground p-5'>
+            <CardHeader className='space-y-0'>
               <div className='flex gap-2 bg-input p-4 rounded-t-lg'>
                 <div className='w-3 h-3 bg-red-500 rounded-full'></div>
                 <div className='w-3 h-3 bg-yellow-500 rounded-full'></div>
@@ -46,10 +46,10 @@ export const Working = () => {
                   }}
                 />
               </div>
-              <h3 className='text-heading-h7 py-3 font-medium'>
-                {feature.title}
-              </h3>
-              <p>{feature.description}</p>
+            </CardHeader>
+            <CardContent className='space-y-2'>
+              <h3 className='text-heading-h7 font-medium'>{feature.title}</h3>
+              <p className='text-muted-foreground'>{feature.description}</p>
             </CardContent>
           </Card>
         ))}

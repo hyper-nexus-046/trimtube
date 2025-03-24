@@ -29,32 +29,28 @@ export const Features = () => {
               'Strengthen your sales pipeline by identifying, targeting, and attracting high-quality prospects with precision.'
           }
         ].map((feature, index) => (
-          <Card key={index} className='rounded-2xl text-muted-foreground'>
+          <Card key={index} className='rounded-2xl'>
             <CardHeader>
               <div className='flex gap-4 rounded-lg bg-zinc-900 p-4'>
                 <Skeleton className='h-10 w-10 rounded-md bg-zinc-800' />
                 <div className='flex-1 space-y-3'>
                   <Skeleton className='h-3 w-3/4 rounded bg-zinc-800' />
-                  <Skeleton className='h-3 w-full rounded bg-zinc-800' />
-                  <Skeleton className='h-3 w-4/5 rounded bg-zinc-800' />
+                  <Skeleton className='h-3 rounded bg-zinc-800' />
+                  <Skeleton className='h-3 rounded bg-zinc-800' />
                 </div>
               </div>
               <div className='flex justify-between rounded-lg bg-zinc-900 p-4'>
                 <div className='flex-1 space-y-3 pr-4'>
-                  <div className='flex justify-between'>
-                    <div className='w-3/4'>
-                      <Skeleton className='h-3 w-1/3 rounded bg-zinc-800' />
-                    </div>
-                  </div>
-                  <Skeleton className='h-3 w-full rounded bg-zinc-800' />
-                  <Skeleton className='h-3 w-full rounded bg-zinc-800' />
+                  <Skeleton className='h-3 w-1/3 rounded bg-zinc-800' />
+                  <Skeleton className='h-3 rounded bg-zinc-800' />
+                  <Skeleton className='h-3 rounded bg-zinc-800' />
                 </div>
                 <Skeleton className='h-10 w-10 rounded-md bg-zinc-800' />
               </div>
             </CardHeader>
-            <CardContent className=''>
+            <CardContent>
               <h3 className='text-heading-h7 font-medium'>{feature.title}</h3>
-              <p className='text-muted-foreground pt-2 text-[15px]'>
+              <p className='pt-2 text-[15px] text-muted-foreground'>
                 {feature.description}
               </p>
             </CardContent>
@@ -74,34 +70,30 @@ export const Features = () => {
               'Work with our experts to develop personalized AI strategies that streamline operations and deliver impactful results.'
           }
         ].map((feature, index) => (
-          <Card key={index} className='rounded-2xl text-muted-foreground'>
-            <CardContent className='relative space-y-4 text-foreground p-5'>
+          <Card key={index} className='rounded-2xl'>
+            <CardHeader>
               <div className='flex gap-4 rounded-lg bg-zinc-900 p-4'>
                 <Skeleton className='h-10 w-10 rounded-md bg-zinc-800' />
                 <div className='flex-1 space-y-3'>
                   <Skeleton className='h-3 w-3/4 rounded bg-zinc-800' />
-                  <Skeleton className='h-3 w-full rounded bg-zinc-800' />
+                  <Skeleton className='h-3 rounded bg-zinc-800' />
                   <Skeleton className='h-3 w-4/5 rounded bg-zinc-800' />
                 </div>
               </div>
               <div className='flex justify-between rounded-lg bg-zinc-900 p-4'>
                 <div className='flex-1 space-y-3 pr-4'>
-                  <div className='flex justify-between'>
-                    <div className='w-3/4'>
-                      <Skeleton className='h-3 w-1/3 rounded bg-zinc-800' />
-                    </div>
-                  </div>
-                  <Skeleton className='h-3 w-full rounded bg-zinc-800' />
-                  <Skeleton className='h-3 w-full rounded bg-zinc-800' />
+                  <Skeleton className='h-3 w-1/3 rounded bg-zinc-800' />
+                  <Skeleton className='h-3 rounded bg-zinc-800' />
+                  <Skeleton className='h-3 rounded bg-zinc-800' />
                 </div>
                 <Skeleton className='h-10 w-10 rounded-md bg-zinc-800' />
               </div>
-              <div>
-                <h3 className='text-heading-h7 font-medium'>{feature.title}</h3>
-                <p className='text-muted-foreground pt-2'>
-                  {feature.description}
-                </p>
-              </div>
+            </CardHeader>
+            <CardContent>
+              <h3 className='text-heading-h7 font-medium'>{feature.title}</h3>
+              <p className='pt-2 text-[15px] text-muted-foreground'>
+                {feature.description}
+              </p>
             </CardContent>
           </Card>
         ))}

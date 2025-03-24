@@ -1,16 +1,19 @@
 import { Wrapper } from '~/components/wrappers/wrapper'
 
-import { AuthButtons } from './helpers/authButtons'
+import { Logo } from '../logo'
+import { AuthButtons } from './helpers/auth-buttons'
 import { Menu } from './menu'
 import { SideBar } from './sidebar'
 
 export const Header = async () => {
   return (
-    <div className='sticky top-0 z-50 py-4 drop-shadow-md border-b bg-background'>
+    <div className='sticky top-0 z-50 py-4 border-b bg-background'>
       <Wrapper>
-        <nav className='flex w-full items-center justify-between pt'>
-          <h3 className='font-semibold lg:text-lg'>Trimtube</h3>
-          <Menu />
+        <nav className='flex items-center justify-between'>
+          <div className='flex items-center gap-16'>
+            <Logo />
+            <Menu />
+          </div>
           <div className='hidden md:block'>
             <AuthButtons />
           </div>

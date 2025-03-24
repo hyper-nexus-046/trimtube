@@ -9,7 +9,7 @@ import {
 } from '~/components/ui/popover'
 import { ScrollArea } from '~/components/ui/scroll-area'
 
-import { AuthButtons } from './helpers/authButtons'
+import { AuthButtons } from './helpers/auth-buttons'
 
 export const SideBar = async () => {
   return (

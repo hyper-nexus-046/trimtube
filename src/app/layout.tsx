@@ -1,3 +1,5 @@
+import { Header } from '~/components/common/header'
+
 import { PostHogProvider } from './_analytics/provider'
 
 import '~/styles/globals.css'
@@ -34,6 +36,7 @@ export default function RootLayout({
           )}
         >
           <body>
+            <Header />
             {children}
             {modal}
             <TailwindIndicator />

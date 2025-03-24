@@ -16,7 +16,7 @@ export const Menu = () => {
   const headerNavItems = siteConfig.mainNav
   return (
     <NavigationMenu className='hidden md:block'>
-      <NavigationMenuList className='gap-6'>
+      <NavigationMenuList className='gap-9'>
         {headerNavItems
           .filter(item => item.group !== 'Site')
           .map(item => (
