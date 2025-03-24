@@ -13,9 +13,8 @@ export default async function HomePage() {
   return (
     <PageWrapper>
       <Header />
-      <Features />
       <Working />
-
+      <Features />
       <Faq data={data} />
       <FeatureGrid />
       <Pricing />

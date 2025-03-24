@@ -1,6 +1,6 @@
-import { Card, CardContent } from '~/components/ui/card'
+import { Card, CardContent, CardHeader } from '~/components/ui/card'
 import { Skeleton } from '~/components/ui/skeleton'
-import { TitledWrapper } from '~/components/wrappers/title-wrapper'
+import { TitledWrapper } from '~/components/wrappers'
 
 export const Features = () => {
   return (
@@ -8,7 +8,7 @@ export const Features = () => {
       title='Innovative services for growth'
       para='Tailored solutions to streamline, innovate, and grow.'
       sectionName='Services'
-      className='my-content-lg'
+      className='mb-content-lg'
       isMax
     >
       <div className='grid gap-6 pt-content-sm md:grid-cols-2 lg:grid-cols-3'>
@@ -30,8 +30,8 @@ export const Features = () => {
           }
         ].map((feature, index) => (
           <Card key={index} className='rounded-2xl text-muted-foreground'>
-            <CardContent className='relative space-y-4 text-foreground p-5'>
-              <div className='flex space-x-4 rounded-lg bg-zinc-900 p-4'>
+            <CardHeader>
+              <div className='flex gap-4 rounded-lg bg-zinc-900 p-4'>
                 <Skeleton className='h-10 w-10 rounded-md bg-zinc-800' />
                 <div className='flex-1 space-y-3'>
                   <Skeleton className='h-3 w-3/4 rounded bg-zinc-800' />
@@ -51,8 +51,12 @@ export const Features = () => {
                 </div>
                 <Skeleton className='h-10 w-10 rounded-md bg-zinc-800' />
               </div>
+            </CardHeader>
+            <CardContent className=''>
               <h3 className='text-heading-h7 font-medium'>{feature.title}</h3>
-              <p className='text-muted-foreground'>{feature.description}</p>
+              <p className='text-muted-foreground pt-2 text-[15px]'>
+                {feature.description}
+              </p>
             </CardContent>
           </Card>
         ))}
@@ -92,8 +96,12 @@ export const Features = () => {
                 </div>
                 <Skeleton className='h-10 w-10 rounded-md bg-zinc-800' />
               </div>
-              <h3 className='text-heading-h7 font-medium'>{feature.title}</h3>
-              <p className='text-muted-foreground'>{feature.description}</p>
+              <div>
+                <h3 className='text-heading-h7 font-medium'>{feature.title}</h3>
+                <p className='text-muted-foreground pt-2'>
+                  {feature.description}
+                </p>
+              </div>
             </CardContent>
           </Card>
         ))}
