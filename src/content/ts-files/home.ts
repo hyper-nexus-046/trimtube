@@ -1,3 +1,10 @@
+import profile1 from 'public/testimonials/profile1.jpg'
+import profile2 from 'public/testimonials/profile2.avif'
+import profile3 from 'public/testimonials/profile3.avif'
+import profile4 from 'public/testimonials/profile4.avif'
+import profile5 from 'public/testimonials/profile5.avif'
+import profile6 from 'public/testimonials/profile6.jpg'
+
 export const TestimonialsData = [
   {
     quote:
@@ -5,7 +12,7 @@ export const TestimonialsData = [
     name: 'Dean Watson',
     title: 'Managing director',
     company: 'Farmland',
-    avatar: '/testimonials/profile1.jpg'
+    avatar: profile1
   },
   {
     quote:
@@ -13,7 +20,7 @@ export const TestimonialsData = [
     name: 'Emily Zhang',
     title: 'CEO',
     company: 'Futuresync',
-    avatar: '/testimonials/profile2.avif'
+    avatar: profile2
   },
   {
     quote:
@@ -21,7 +28,7 @@ export const TestimonialsData = [
     name: 'James Carter',
     title: 'Marketing director',
     company: 'Innolystic',
-    avatar: '/testimonials/profile3.avif'
+    avatar: profile3
   },
   {
     quote:
@@ -29,7 +36,7 @@ export const TestimonialsData = [
     name: 'Liam Walker',
     title: 'Product manager',
     company: 'Brightpath',
-    avatar: '/testimonials/profile4.avif'
+    avatar: profile4
   },
   {
     quote:
@@ -37,7 +44,7 @@ export const TestimonialsData = [
     name: 'Miguel Torres',
     title: 'IT consultant',
     company: 'Alphaedge',
-    avatar: '/testimonials/profile5.avif'
+    avatar: profile5
   },
   {
     quote:
@@ -45,10 +52,9 @@ export const TestimonialsData = [
     name: 'Priya Sharma',
     title: 'Founder',
     company: 'NexGen',
-    avatar: '/testimonials/profile6.jpg'
+    avatar: profile6
   }
 ]
-
 export const pricingPlans = [
   {
     title: 'Basic',
