@@ -1,9 +1,8 @@
 import Image from 'next/image'
+import { TestimonialsData } from '~/content/ts-files/home'
 
 import { Card, CardContent } from '~/components/ui/card'
-import { TitledWrapper } from '~/components/wrappers/title-wrapper'
-
-import { TestimonialsData } from './testimonials-data'
+import { TitledWrapper } from '~/components/wrappers'
 
 export const Testimonials = () => {
   return (
@@ -16,11 +15,8 @@ export const Testimonials = () => {
     >
       <div className='grid gap-6 pt-content-sm md:grid-cols-2 lg:grid-cols-3'>
         {TestimonialsData.map((testimonial, index) => (
-          <Card
-            key={index}
-            className='relative overflow-hidden rounded-[30px] text-muted-foreground'
-          >
-            <CardContent className='flex h-full flex-col gap-5 p-5'>
+          <Card key={index} className='relative overflow-hidden rounded-[30px]'>
+            <CardContent className='flex flex-col gap-5 p-5'>
               <div className='flex-1'>
                 <p>&quot;{testimonial.quote}&quot;</p>
               </div>
@@ -31,13 +27,11 @@ export const Testimonials = () => {
                     alt={testimonial.name}
                     width={100}
                     height={100}
-                    className='h-11 w-11 rounded-sm'
+                    className='h-12 w-12 rounded-sm'
                   />
                 </div>
                 <div>
-                  <h4 className='text-base font-medium text-secondary-foreground'>
-                    {testimonial.name}
-                  </h4>
+                  <h4 className='text-base font-medium'>{testimonial.name}</h4>
                   <p>
                     {testimonial.title} : {testimonial.company}
                   </p>

@@ -1,7 +1,7 @@
 import { Check, TrendingDown, TrendingUp } from 'lucide-react'
 
 import { Card, CardContent } from '~/components/ui/card'
-import { TitledWrapper } from '~/components/wrappers/title-wrapper'
+import { TitledWrapper } from '~/components/wrappers'
 
 export const FeatureGrid = () => {
   return (
@@ -35,13 +35,15 @@ export const FeatureGrid = () => {
         ].map((feature, index) => (
           <Card
             key={index}
-            className='relative overflow-hidden rounded-[30px] border-secondary text-muted-foreground'
+            className='relative overflow-hidden rounded-[30px] border-secondary'
           >
-            <CardContent className='flex h-full flex-col text-foreground gap-5 p-5'>
-              <span className='bg-border p-[6px] lg-p-2 w-fit rounded-sm'>
+            <CardContent className='flex h-full flex-col text-foreground p-6'>
+              <span className='bg-border p-[6px] lg-p-2 rounded-sm'>
                 <feature.icon size={18} />
               </span>
-              <h3 className='text-heading-h7 font-medium'>{feature.title}</h3>
+              <h3 className='text-heading-h7 font-medium pb-3 pt-6'>
+                {feature.title}
+              </h3>
               <p className='text-muted-foreground'>{feature.description}</p>
             </CardContent>
             <div className='absolute -right-3 top-0 h-2/5 w-1/4 bg-[rgba(81,47,235,0.5)] blur-[50px]' />
