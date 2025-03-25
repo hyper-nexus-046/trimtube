@@ -38,7 +38,7 @@ export const siteConfig = {
       type: 'link',
       group: 'Subscription',
       pages: [],
-      forHeader: false
+      forHeader: true
     },
     {
       id: 4,

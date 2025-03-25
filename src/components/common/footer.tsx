@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 import { siteConfig } from '~/config/site'
-import { Logo } from '~/components/common/logo'
+import { Logo } from '~/components/common/header/logo'
 
 import { Wrapper } from '../wrappers'
 

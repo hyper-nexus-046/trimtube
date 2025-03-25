@@ -1,7 +1,7 @@
 import { Wrapper } from '~/components/wrappers/wrapper'
 
-import { Logo } from '../logo'
 import { AuthButtons } from './helpers/auth-buttons'
+import { Logo } from './logo'
 import { Menu } from './menu'
 import { SideBar } from './sidebar'
 

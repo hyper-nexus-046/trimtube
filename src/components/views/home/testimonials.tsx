@@ -25,13 +25,13 @@ export const Testimonials = () => {
                   <Image
                     src={testimonial.avatar}
                     alt={testimonial.name}
-                    width={100}
-                    height={100}
-                    className='h-12 w-12 rounded-sm'
+                    className='h-10 w-10 rounded-sm'
                   />
                 </div>
                 <div>
-                  <h4 className='text-base font-medium'>{testimonial.name}</h4>
+                  <h4 className='text-base font-semibold'>
+                    {testimonial.name}
+                  </h4>
                   <p>
                     {testimonial.title} : {testimonial.company}
                   </p>

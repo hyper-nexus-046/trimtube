@@ -51,7 +51,7 @@ export const TitledWrapper = forwardRef<
         {sectionName && (
           <div
             className={cn(
-              'mx-auto mb-8 flex w-fit items-center gap-2 rounded-md border border-border bg-[#0d0d0d] px-5 py-[6px] text-sm'
+              'mx-auto mb-8 flex w-fit items-center gap-2 rounded-md border border-border bg-[#0d0d0d] px-5 py-2 text-sm'
             )}
           >
             {sectionIcon && sectionIcon}
