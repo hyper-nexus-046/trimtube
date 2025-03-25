@@ -25,7 +25,9 @@ export const Testimonials = () => {
                   <Image
                     src={testimonial.avatar}
                     alt={testimonial.name}
-                    className='h-10 w-10 rounded-sm'
+                    width={100}
+                    height={100}
+                    className='h-11 w-11 rounded'
                   />
                 </div>
                 <div>

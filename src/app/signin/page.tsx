@@ -2,12 +2,11 @@ import Image from 'next/image'
 import dashboard from 'public/common/dashboard.png'
 
 import { LoginForm } from '~/components/common/login-form'
-import { Wrapper } from '~/components/wrappers'
 
 export default async function Page() {
   return (
-    <Wrapper className='grid lg:grid-cols-[1fr_1.5fr] gap-10 items-center lg:min-h-screen'>
-      <LoginForm className='xl:w-4/5 pt-content-lg lg:pt-0' />
+    <div className='grid lg:grid-cols-[1fr_1.5fr] gap-10 items-center min-h-screen bg-[#02020e]'>
+      <LoginForm className='xl:w-4/5 mx-auto lg:pt-0' />
       <div
         style={{
           background: `
@@ -36,11 +35,11 @@ export default async function Page() {
           </p>
         </div>
         <Image
-          className='-rotate-12 absolute -bottom-24 -right-24 rounded-md'
+          className='-rotate-12 absolute -bottom-32 xl:-bottom-52 2xl:-bottom-60 -right-24 xl:-right-36 rounded-md'
           src={dashboard}
           alt='dashboard'
         />
       </div>
-    </Wrapper>
+    </div>
   )
 }
