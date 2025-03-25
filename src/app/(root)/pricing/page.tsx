@@ -7,8 +7,8 @@ import { PageWrapper } from '~/components/wrappers'
 
 export default async function Page() {
   return (
-    <PageWrapper className='p-content mb-content-lg'>
-      <Pricing headingLevel='h1' />
+    <PageWrapper>
+      <Pricing headingLevel='h1' className='mt-content-sm' />
       <Features />
       <Faq data={data} />
     </PageWrapper>

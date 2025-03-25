@@ -6,6 +6,7 @@ import { pricingPlans } from '~/content/ts-files/home'
 import { motion } from 'framer-motion'
 import { ArrowUpRight, Check, Layers } from 'lucide-react'
 
+import { cn } from '~/lib/utils'
 import { Button } from '~/components/ui/button'
 import { Card, CardContent, CardHeader } from '~/components/ui/card'
 import { TitledWrapper } from '~/components/wrappers'
@@ -14,7 +15,7 @@ export const Pricing = ({
   title,
   description,
   headingLevel,
-  className = 'mb-content-lg'
+  className
 }: {
   title?: string
   description?: string
@@ -31,7 +32,7 @@ export const Pricing = ({
       }
       sectionName='Plans'
       headingLevel={headingLevel}
-      className={className}
+      className={cn('mb-content-lg', className)}
     >
       {/* Toggle Button */}
       <div className='flex justify-center pt-content-sm'>
