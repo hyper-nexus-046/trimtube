@@ -1,8 +1,8 @@
 import profile1 from 'public/testimonials/profile1.jpg'
-import profile2 from 'public/testimonials/profile2.avif'
-import profile3 from 'public/testimonials/profile3.avif'
-import profile4 from 'public/testimonials/profile4.avif'
-import profile5 from 'public/testimonials/profile5.avif'
+import profile2 from 'public/testimonials/profile2.jpg'
+import profile3 from 'public/testimonials/profile3.jpg'
+import profile4 from 'public/testimonials/profile4.jpg'
+import profile5 from 'public/testimonials/profile5.jpg'
 import profile6 from 'public/testimonials/profile6.jpg'
 
 export const TestimonialsData = [

@@ -6,8 +6,8 @@ import { Wrapper } from '~/components/wrappers'
 
 export default async function Page() {
   return (
-    <Wrapper className='mb-content-lg pt-content-sm grid  lg:grid-cols-2 gap-10'>
-      <LoginForm />
+    <Wrapper className='grid lg:grid-cols-[1fr_1.5fr] gap-10 items-center lg:min-h-screen'>
+      <LoginForm className='xl:w-4/5 pt-content-lg lg:pt-0' />
       <div
         style={{
           background: `
@@ -24,19 +24,19 @@ export default async function Page() {
             )
           `
         }}
-        className='relative flex flex-col items-center p-6 lg:p-10 overflow-hidden h-96 sm:h-[510px]'
+        className='relative hidden lg:flex flex-col p-6 lg:p-10 overflow-hidden h-full'
       >
-        <div>
-          <h1 className='text-heading-h5 text-semibold pb-2'>
+        <div className='pt-4 space-y-3'>
+          <h1 className='text-heading-h5 text-semibold'>
             Design for individuals
           </h1>
           <p>
-            See the analytics and grow your date for Task remotely, from
+            See the analytics and grow your date for Task remotely, <br /> from
             anywhere!
           </p>
         </div>
         <Image
-          className='mt-8 -rotate-12 absolute -bottom-10 scale-110 -right-20'
+          className='-rotate-12 absolute -bottom-24 -right-24 rounded-md'
           src={dashboard}
           alt='dashboard'
         />

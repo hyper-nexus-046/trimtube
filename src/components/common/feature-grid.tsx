@@ -38,7 +38,7 @@ export const FeatureGrid = () => {
             className='relative overflow-hidden rounded-[30px] border-secondary'
           >
             <CardContent className='flex h-full flex-col text-foreground p-6'>
-              <span className='bg-border p-[6px] lg-p-2 rounded-sm'>
+              <span className='bg-border p-[6px] w-fit lg-p-2 rounded-sm'>
                 <feature.icon size={18} />
               </span>
               <h3 className='text-heading-h7 font-medium pb-3 pt-6'>
