@@ -10,16 +10,28 @@ import { Button } from '~/components/ui/button'
 import { Card, CardContent, CardHeader } from '~/components/ui/card'
 import { TitledWrapper } from '~/components/wrappers'
 
-export const Pricing = () => {
+export const Pricing = ({
+  title,
+  description,
+  headingLevel,
+  className = 'mb-content-lg'
+}: {
+  title?: string
+  description?: string
+  headingLevel?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+  className?: string
+}) => {
   const [isAnnualy, setIsAnnualy] = useState(true)
 
   return (
     <TitledWrapper
-      title='Flexible plans for growth'
-      para='Transparent pricing designed to fit your requirements.'
+      title={title ?? 'Flexible plans for growth'}
+      para={
+        description ?? 'Transparent pricing designed to fit your requirements.'
+      }
       sectionName='Plans'
-      className='mb-content-lg'
-      isMax
+      headingLevel={headingLevel}
+      className={className}
     >
       {/* Toggle Button */}
       <div className='flex justify-center pt-content-sm'>
