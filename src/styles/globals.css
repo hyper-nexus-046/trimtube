@@ -37,7 +37,7 @@
         --foreground: 0 0% 100%;
         --card: 0 0% 6%;
         --card-foreground: 0 0% 98%;
-        --popover: 224 71.4% 4.1%;
+        --popover: 0 0% 6%;
         --popover-foreground: 210 20% 98%;
         --primary: 251 80% 55%;
         --primary-foreground: 240 25% 98%;
@@ -71,4 +71,8 @@
     body {
         @apply bg-background text-foreground;
     }
+}
+
+.lower-opacity-background {
+    background-color: rgba(255, 255, 255, 0.06);
 }

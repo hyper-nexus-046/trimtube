@@ -27,7 +27,6 @@ export const BottomCta = () => {
             Schedule a quick call <ArrowUpRight className='h-4 w-4' />
           </Link>
         </Button>
-
         <Button className='text-secondary-foreground' variant='link'>
           Get Started
         </Button>

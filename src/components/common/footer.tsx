@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 import { siteConfig } from '~/config/site'
+import { Logo } from '~/components/common/header/logo'
 
 import { Wrapper } from '../wrappers'
 
@@ -25,7 +26,7 @@ export const Footer = () => {
         <div className="absolute inset-0 z-[-1] mx-auto w-[65%] bg-[url('/common/faq-overlay-elipse.svg')] bg-cover bg-center opacity-25 blur-2xl" />
         <footer className='grid gap-7 md:grid-cols-[3fr_1fr_1fr_1fr]'>
           <div>
-            <h5 className='text-heading-h7 font-medium'>Trimtube</h5>
+            <Logo />
             <p className='pt-3 text-sm font-light lg:w-3/5'>
               Your trusted partner in AI solutions, creating smarter systems for
               smarter businesses.
