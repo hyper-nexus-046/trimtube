@@ -13,7 +13,7 @@ export const BottomCta = () => {
         </h2>
         <p className='md:w-3/4 lg:w-[55%] text-paragraph-sm leading-relaxed'>
           Join thousands of users who are already extracting maximum value from
-          YouTube videos with SliceTube.
+          YouTube videos with Trimtube.
         </p>
         <div className='flex items-center gap-2 pt-4'>
           <Button asChild>

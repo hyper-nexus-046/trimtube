@@ -2,11 +2,13 @@ import { DollarSign, Download, Timer, VolumeX } from 'lucide-react'
 
 import { FeatureGrid } from '~/components/common/feature-grid'
 import { BottomCta } from '~/components/views/features/bottomCta'
+import { Hero } from '~/components/views/features/hero'
 import { PageWrapper } from '~/components/wrappers'
 
 export default function Features() {
   return (
     <PageWrapper showCta={false}>
+      <Hero />
       <FeatureGrid
         title='Used by hundreds of creators'
         para='From YouTube professionals to students, SliceTube serves everyone.'
