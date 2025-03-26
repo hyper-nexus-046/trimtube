@@ -46,7 +46,7 @@ export const FeatureGrid = ({
       title={title ?? 'Maximize efficiency and impact'}
       para={para ?? 'Discover the key benefits of partnering with us.'}
       sectionName={sectionName ?? 'Benefits'}
-      className='mb-content-lg !px-0'
+      className='mb-content-lg'
       isMax={isMax}
     >
       <div className={className}>
