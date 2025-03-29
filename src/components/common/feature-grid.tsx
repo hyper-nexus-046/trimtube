@@ -3,36 +3,54 @@ import { Check, TrendingDown, TrendingUp } from 'lucide-react'
 import { Card, CardContent } from '~/components/ui/card'
 import { TitledWrapper } from '~/components/wrappers'
 
-export const FeatureGrid = () => {
+export const FeatureGrid = ({
+  className = 'grid gap-6 pt-content-sm md:grid-cols-2 lg:grid-cols-3',
+  title,
+  para,
+  sectionName,
+  isMax = false,
+  features = [
+    {
+      icon: TrendingDown,
+      title: 'Cost reduction',
+      description:
+        'Optimize business processes and streamline operations to significantly minimize costs and maximize overall efficiency.'
+    },
+    {
+      icon: Check,
+      title: 'Improved outcomes',
+      description:
+        'Leverage powerful data-driven insights and innovative strategies to enhance business performance and achieve superior outcomes.'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Increased productivity',
+      description:
+        'Enhance group performance and output by automating redundant tasks, refining processes, and speeding up business functions.'
+    }
+  ]
+}: {
+  className?: string
+  title?: string
+  para?: string
+  sectionName?: string
+  isMax?: boolean
+  features?: {
+    icon: React.ElementType
+    title: string
+    description: string
+  }[]
+}) => {
   return (
     <TitledWrapper
-      title='Maximize efficiency and impact'
-      para='Discover the key benefits of partnering with us.'
-      sectionName='Benefits'
+      title={title ?? 'Maximize efficiency and impact'}
+      para={para ?? 'Discover the key benefits of partnering with us.'}
+      sectionName={sectionName ?? 'Benefits'}
       className='mb-content-lg'
-      isMax
+      isMax={isMax}
     >
-      <div className='grid gap-6 pt-content-sm md:grid-cols-2 lg:grid-cols-3'>
-        {[
-          {
-            icon: TrendingDown,
-            title: 'Cost reduction',
-            description:
-              'Optimize business processes and streamline operations to significantly minimize costs and maximize overall efficiency.'
-          },
-          {
-            icon: Check,
-            title: 'Improved outcomes',
-            description:
-              'Leverage powerful data-driven insights and innovative strategies to enhance business performance and achieve superior outcomes.'
-          },
-          {
-            icon: TrendingUp,
-            title: 'Increased productivity',
-            description:
-              'Enhance group performance and output by automating redundant tasks, refining processes, and speeding up business functions.'
-          }
-        ].map((feature, index) => (
+      <div className={className}>
+        {features?.map((feature, index) => (
           <Card
             key={index}
             className='relative overflow-hidden rounded-[30px] border-secondary'
