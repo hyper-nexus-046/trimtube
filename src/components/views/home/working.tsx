@@ -7,7 +7,7 @@ export const Working = () => {
       title='Your path to excellence'
       para='A simple, effective approach to deliver excellence.'
       sectionName='Process'
-      className='my-content-lg'
+      className='mb-content-lg'
       isMax
     >
       <div className='grid gap-6 pt-content-sm md:grid-cols-2 lg:grid-cols-3'>

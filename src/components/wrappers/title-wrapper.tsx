@@ -12,7 +12,7 @@ export const TitledWrapper = forwardRef<
     sectionName?: string
     sectionIcon?: ReactNode
     para?: string | ReactNode
-    children: ReactNode | ReactNode[]
+    children?: ReactNode | ReactNode[]
     className?: string
     titleClasses?: string
     paraClasses?: string
