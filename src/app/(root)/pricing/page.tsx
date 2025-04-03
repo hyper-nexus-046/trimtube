@@ -5,7 +5,7 @@ import { Features } from '~/components/views/home/features'
 import { Pricing } from '~/components/views/home/pricing'
 import { PageWrapper } from '~/components/wrappers'
 
-export default async function Page() {
+export default function Page() {
   return (
     <PageWrapper>
       <Pricing headingLevel='h1' className='mt-content-sm' />

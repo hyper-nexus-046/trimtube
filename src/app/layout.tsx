@@ -1,3 +1,5 @@
+import NextTopLoader from 'nextjs-toploader'
+
 import { PostHogProvider } from './_analytics/provider'
 
 import '~/styles/globals.css'
@@ -34,6 +36,15 @@ export default function RootLayout({
           )}
         >
           <body>
+            <NextTopLoader
+              showSpinner={false}
+              height={3}
+              color='#954AFC'
+              easing='ease-in'
+              crawl
+              speed={1.5}
+              crawlSpeed={1}
+            />
             {children}
             {modal}
             <TailwindIndicator />

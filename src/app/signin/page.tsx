@@ -1,12 +1,16 @@
 import Image from 'next/image'
 import dashboard from 'public/common/dashboard.png'
 
+import { Logo } from '~/components/common/header/logo'
 import { LoginForm } from '~/components/common/login-form'
 
-export default async function Page() {
+export default function Page() {
   return (
-    <div className='grid lg:grid-cols-[1fr_1.5fr] gap-10 items-center min-h-screen bg-[#02020e]'>
-      <LoginForm className='xl:w-4/5 mx-auto lg:pt-0' />
+    <div className='grid lg:grid-cols-[1fr_1.5fr] items-center min-h-screen bg-[#02020e]'>
+      <div className='relative h-full flex flex-col justify-center'>
+        <Logo className='absolute top-3 left-5' />
+        <LoginForm className='w-full md:w-[90%] lg:w-4/5 mx-auto  px-12 lg:px-0' />
+      </div>
       <div
         style={{
           background: `
@@ -29,13 +33,13 @@ export default async function Page() {
           <h1 className='text-heading-h5 text-semibold'>
             Design for individuals
           </h1>
-          <p>
-            See the analytics and grow your date for Task remotely, <br /> from
+          <p className='w-3/4 xl:w-3/5'>
+            See the analytics and grow your date for Task remotely, from
             anywhere!
           </p>
         </div>
         <Image
-          className='-rotate-12 absolute -bottom-32 xl:-bottom-52 2xl:-bottom-60 -right-24 xl:-right-36 rounded-md'
+          className='-rotate-12 absolute -bottom-32 xl:-bottom-52 2xl:-bottom-60 -right-24 xl:-right-36 rounded-xl'
           src={dashboard}
           alt='dashboard'
         />
