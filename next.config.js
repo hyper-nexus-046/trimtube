@@ -15,6 +15,9 @@ const config = {
   eslint: {
     ignoreDuringBuilds: true
   },
+  images: {
+    domains: ['i.ytimg.com'] // Allow external images from i.ytimg.com
+  },
   async rewrites() {
     return [
       {

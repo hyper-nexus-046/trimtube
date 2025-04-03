@@ -4,7 +4,7 @@ import dashboard from 'public/common/dashboard.png'
 import { Logo } from '~/components/common/header/logo'
 import { LoginForm } from '~/components/common/login-form'
 
-export default async function Page() {
+export default function Page() {
   return (
     <div className='grid lg:grid-cols-[1fr_1.5fr] items-center min-h-screen bg-[#02020e]'>
       <div className='relative h-full flex flex-col justify-center'>
