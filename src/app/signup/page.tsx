@@ -8,7 +8,7 @@ export default async function Page() {
   return (
     <div className='grid lg:grid-cols-[1fr_1.5fr] items-center min-h-screen bg-[#02020e]'>
       <div className='relative h-full flex flex-col justify-center'>
-        <Logo className='absolute top-3 right-5' />
+        <Logo className='absolute top-3 left-5' />
         <LoginForm className='w-full md:w-[90%] lg:w-4/5 mx-auto  px-12 lg:px-0' />
       </div>
       <div

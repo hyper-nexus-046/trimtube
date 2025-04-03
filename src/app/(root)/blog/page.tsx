@@ -3,7 +3,7 @@ import { Blogs } from '~/content/ts-files/blogs'
 import { BlogCard } from '~/components/views/blog/blog-card'
 import { PageWrapper, TitledWrapper, Wrapper } from '~/components/wrappers'
 
-export default function BlogPage() {
+export default function Page() {
   return (
     <PageWrapper>
       <TitledWrapper
@@ -13,9 +13,8 @@ export default function BlogPage() {
         sectionName='Blog'
         headingLevel='h1'
       />
-
       <Wrapper className='mb-content-lg'>
-        <h1 className='text-heading-h6 font-semibold'>All Articles</h1>
+        <h2 className='text-heading-h6 font-semibold'>All Articles</h2>
         <p className='sm:w-4/5 lg:w-3/5 pt-2'>
           Find all the tools that will help designers build to last. Simplify
           design with our comprehensive and carefully written library from the

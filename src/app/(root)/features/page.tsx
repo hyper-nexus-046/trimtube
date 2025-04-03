@@ -5,7 +5,7 @@ import { BottomCta } from '~/components/views/features/bottomCta'
 import { Hero } from '~/components/views/features/hero'
 import { PageWrapper } from '~/components/wrappers'
 
-export default function Features() {
+export default function Page() {
   return (
     <PageWrapper showCta={false}>
       <Hero />
