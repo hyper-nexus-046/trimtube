@@ -7,7 +7,7 @@ import { Wrapper } from '~/components/wrappers'
 export const BottomCta = () => {
   return (
     <Wrapper className='!px-0 md:!px-content-sm lg:!px-content'>
-      <div className='bg-[#111827] px-10 lg:px-16 py-14 md:py-20 md:rounded-2xl mb-content-lg space-y-5'>
+      <div className='bg-card px-10 lg:px-16 py-14 md:py-20 md:rounded-2xl mb-content-lg space-y-5'>
         <h2 className='text-heading-h5 lg:w-[55%] font-semibold'>
           Ready to save time and get more out of YouTube?
         </h2>
