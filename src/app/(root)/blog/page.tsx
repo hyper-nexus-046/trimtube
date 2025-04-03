@@ -7,11 +7,11 @@ export default function BlogPage() {
   return (
     <PageWrapper>
       <TitledWrapper
-        sectionName='Blog'
         className='mb-content-lg py-content-lg md:pb-36 bg-card !max-w-full'
-        headingLevel='h1'
         title='Insight and Updates'
         para='A collection of hand-picked articles for freelancers, by freelancers, Deep dives, insights, and honest advice to navigate the freelance landscape.'
+        sectionName='Blog'
+        headingLevel='h1'
       />
 
       <Wrapper className='mb-content-lg'>
@@ -24,12 +24,12 @@ export default function BlogPage() {
         <div className='pt-content-sm space-y-6'>
           <div className='grid gap-6 md:grid-cols-2 items-stretch'>
             {Blogs.slice(0, 2).map(article => (
-              <BlogCard key={article.id} article={article} />
+              <BlogCard key={article.id} {...article} />
             ))}
           </div>
           <div className='grid gap-6 md:grid-cols-2 lg:grid-cols-3'>
             {Blogs.slice(2, 5).map(article => (
-              <BlogCard key={article.id} article={article} />
+              <BlogCard key={article.id} {...article} />
             ))}
           </div>
         </div>
