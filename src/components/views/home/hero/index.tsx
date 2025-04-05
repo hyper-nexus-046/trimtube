@@ -6,7 +6,7 @@ import { Dialog, DialogContent } from '~/components/ui/dialog'
 import { Input } from '~/components/ui/input'
 import { TitledWrapper } from '~/components/wrappers'
 
-import { VideoPreview } from '../VideoPreview'
+import { VideoPreview } from '../videoPreview'
 
 function extractYouTubeId(link: string): string | null {
   const regex =
