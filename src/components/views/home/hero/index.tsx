@@ -6,7 +6,8 @@ import { Dialog, DialogContent } from '~/components/ui/dialog'
 import { Input } from '~/components/ui/input'
 import { TitledWrapper } from '~/components/wrappers'
 
-import { VideoPreview } from '../videoPreview'
+import { VideoInformation } from './VideoInformation'
+import { VideoPreview } from './videoPreview'
 
 function extractYouTubeId(link: string): string | null {
   const regex =
@@ -14,7 +15,6 @@ function extractYouTubeId(link: string): string | null {
   const match = regex.exec(link.trim())
   return match?.[1] ?? null
 }
-
 export const Hero = () => {
   const [url, setUrl] = useState('')
   const [videoId, setVideoId] = useState<string | null>(null)
@@ -61,14 +61,17 @@ export const Hero = () => {
       )}
 
       <Dialog open={openDialog} onOpenChange={handleDialogOpenChange}>
-        <DialogContent className='sm:max-w-[720px] h-[420px] p-0 overflow-hidden border border-red-500'>
-          {videoId ? (
-            <VideoPreview videoId={videoId} />
-          ) : (
-            <p className='text-center text-sm text-red-500'>
-              Invalid or missing video ID
-            </p>
-          )}
+        <DialogContent className='sm:max-w-[1000px] h-[800px] lg:h-[480px] p-4 overflow-hidden lg:grid-cols-[1fr_1fr] border border-white lg:[&>button.absolute]:hidden'>
+          <div>
+            {videoId ? (
+              <VideoPreview videoId={videoId} />
+            ) : (
+              <p className='text-center text-sm text-red-500'>
+                Invalid or missing video ID
+              </p>
+            )}
+          </div>
+          <VideoInformation />
         </DialogContent>
       </Dialog>
     </TitledWrapper>
