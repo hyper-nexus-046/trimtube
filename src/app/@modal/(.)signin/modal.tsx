@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation'
 
-import { Dialog, DialogContent } from '~/components/ui/dialog'
+import { Dialog, DialogContent, DialogTitle } from '~/components/ui/dialog'
 
 export function Modal({ children }: { children: React.ReactNode }) {
   const router = useRouter()
@@ -13,7 +13,8 @@ export function Modal({ children }: { children: React.ReactNode }) {
 
   return (
     <Dialog defaultOpen={true} open={true} onOpenChange={onDismiss}>
-      <DialogContent className='lg:max-w-[90%] xl:max-w-[75%] my-96 overflow-hidden p-0 lg:[&>button.absolute]:hidden'>
+      <DialogContent className='lg:max-w-[90%] xl:max-w-[75%] my-96 overflow-hidden p-0 [&>button.absolute]:border [&>button.absolute]:p-2'>
+        <DialogTitle className='sr-only'>Signin</DialogTitle>
         {children}
       </DialogContent>
     </Dialog>
