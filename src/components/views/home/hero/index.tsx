@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-import { Dialog, DialogContent } from '~/components/ui/dialog'
+import { Dialog, DialogContent, DialogTitle } from '~/components/ui/dialog'
 import { Input } from '~/components/ui/input'
 import { TitledWrapper } from '~/components/wrappers'
 
@@ -62,6 +62,9 @@ export const Hero = () => {
 
       <Dialog open={openDialog} onOpenChange={handleDialogOpenChange}>
         <DialogContent className='sm:max-w-[1000px] h-[800px] lg:h-[480px] p-4 overflow-hidden lg:grid-cols-[1fr_1fr] border border-white lg:[&>button.absolute]:hidden'>
+          <DialogTitle className='sr-only'>
+            Video Preview and Download
+          </DialogTitle>
           <div>
             {videoId ? (
               <VideoPreview videoId={videoId} />
