@@ -9,7 +9,7 @@ import { Testimonials } from '~/components/views/home/testimonials'
 import { Working } from '~/components/views/home/working'
 import { PageWrapper } from '~/components/wrappers/page-wrapper'
 
-export default async function HomePage() {
+export default function Page() {
   return (
     <PageWrapper>
       <Hero />

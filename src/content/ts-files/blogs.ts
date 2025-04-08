@@ -11,7 +11,7 @@ export const Blogs = [
     category: 'Product Updates',
     date: 'Feb 24, 2024',
     image: blog2,
-    href: '/'
+    href: '/blog/meet-all-the-new-stack'
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ export const Blogs = [
     category: 'Productivity',
     date: 'Feb 10, 2024',
     image: blog2,
-    href: '/'
+    href: '/blog/using-heatmaps-to-improve-your-websites-ux'
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ export const Blogs = [
     category: 'Spotlight',
     date: 'Jan 24, 2023',
     image: blog2,
-    href: '/'
+    href: '/blog/how-to-create-a-cohesive-omnichannel'
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ export const Blogs = [
     category: 'Productivity',
     date: 'Jan 24, 2023',
     image: blog1,
-    href: '/'
+    href: '/blog/the-power-and-business-value-of-visual'
   },
   {
     id: 5,
@@ -51,6 +51,6 @@ export const Blogs = [
     category: 'Spotlight',
     date: 'Jan 24, 2023',
     image: blog2,
-    href: '/'
+    href: '/blog/the-rise-of-ai-in-everyday-life'
   }
 ]
