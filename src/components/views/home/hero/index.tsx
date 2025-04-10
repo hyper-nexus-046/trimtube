@@ -13,8 +13,8 @@ import {
 import { Input } from '~/components/ui/input'
 import { TitledWrapper } from '~/components/wrappers'
 
-import { VideoInformation } from './VideoInformation'
-import { VideoPreview } from './videoPreview'
+import { VideoInformation } from './video-information'
+import { VideoPreview } from './video-preview'
 
 function extractYouTubeId(link: string): string | null {
   const regex =
@@ -22,6 +22,7 @@ function extractYouTubeId(link: string): string | null {
   const match = regex.exec(link.trim())
   return match?.[1] ?? null
 }
+
 export const Hero = () => {
   const [url, setUrl] = useState('')
   const [videoId, setVideoId] = useState<string | null>(null)
@@ -71,7 +72,10 @@ export const Hero = () => {
         <DialogContent className='sm:max-w-[1000px] h-[800px] lg:h-[480px] overflow-hidden [&>button.absolute]:border [&>button.absolute]:p-2'>
           <DialogHeader className='flex-row gap-3 items-center'>
             <Avatar>
-              <AvatarImage src='https://github.com/shadcn.png' alt='@shadcn' />
+              <AvatarImage
+                src='https://github.com/shadcn.png'
+                alt='Youtube Channel'
+              />
               <AvatarFallback>Profile</AvatarFallback>
             </Avatar>
             <div>
