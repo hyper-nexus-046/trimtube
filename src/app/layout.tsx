@@ -1,5 +1,7 @@
 import NextTopLoader from 'nextjs-toploader'
 
+import { Toaster } from '~/components/ui/sonner'
+
 import { PostHogProvider } from './_analytics/provider'
 
 import '~/styles/globals.css'
@@ -47,6 +49,7 @@ export default function RootLayout({
             />
             {children}
             {modal}
+            <Toaster />
             <TailwindIndicator />
           </body>
         </html>

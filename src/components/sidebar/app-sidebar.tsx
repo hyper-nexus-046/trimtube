@@ -1,10 +1,9 @@
+import Link from 'next/link'
 import {
   Code,
   FilePlus,
   Headset,
-  HelpCircleIcon,
   LayoutDashboard,
-  ReceiptText,
   Search,
   SettingsIcon,
   SquarePlus,
@@ -16,13 +15,13 @@ import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
-  SidebarHeader
+  SidebarHeader,
+  SidebarMenuButton
 } from '~/components/ui/sidebar'
 import { Logo } from '~/components/common/header/logo'
 import { NavAccount } from '~/components/sidebar/nav-account'
 import { NavGeneral } from '~/components/sidebar/nav-general'
 import { NavInternal } from '~/components/sidebar/nav-internal'
-import { NavSecondary } from '~/components/sidebar/nav-secondary'
 import { NavUser } from '~/components/sidebar/nav-user'
 
 const data = {
@@ -72,26 +71,9 @@ const data = {
       icon: UserCheck
     },
     {
-      title: 'Billing',
-      url: '#',
-      icon: ReceiptText
-    },
-    {
       title: 'Support',
       url: '#',
       icon: Headset
-    }
-  ],
-  navSecondary: [
-    {
-      title: 'Settings',
-      url: '#',
-      icon: SettingsIcon
-    },
-    {
-      title: 'Get Help',
-      url: '#',
-      icon: HelpCircleIcon
     }
   ]
 }
@@ -106,7 +88,14 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <NavGeneral items={data.navGeneral} />
         <NavInternal items={data.internal} />
         <NavAccount items={data.account} />
-        <NavSecondary items={data.navSecondary} className='mt-auto' />
+        <div className='mt-auto p-2'>
+          <SidebarMenuButton className='text-foreground' asChild>
+            <Link href='/'>
+              <SettingsIcon />
+              Settings
+            </Link>
+          </SidebarMenuButton>
+        </div>
       </SidebarContent>
       <SidebarFooter className='bg-black'>
         <NavUser user={data.user} />
