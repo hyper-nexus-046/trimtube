@@ -1,11 +1,6 @@
 'use client'
 
-import {
-  BellIcon,
-  LogOutIcon,
-  MoreVerticalIcon,
-  UserCircleIcon
-} from 'lucide-react'
+import { BellIcon, LogOutIcon, UserCircleIcon } from 'lucide-react'
 
 import { Avatar, AvatarFallback, AvatarImage } from '~/components/ui/avatar'
 import {
@@ -51,7 +46,6 @@ export function NavUser({
                 <span className='truncate font-medium'>{user.name}</span>
                 <span className='truncate'>{user.email}</span>
               </div>
-              <MoreVerticalIcon className='ml-auto size-4' />
             </SidebarMenuButton>
           </DropdownMenuTrigger>
           <DropdownMenuContent
