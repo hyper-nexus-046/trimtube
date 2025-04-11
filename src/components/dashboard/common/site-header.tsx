@@ -28,13 +28,6 @@ export function SiteHeader() {
           </div>
         </div>
         <div className='flex items-center gap-3'>
-          <Button
-            className='h-6 text-[13px] rounded-md text-blue-500 border-blue-500 hover:bg-black font-normal hover:text-blue-600'
-            variant='outline'
-            asChild
-          >
-            <Link href='/myaccount-subscription'>0/50 Credites Used</Link>
-          </Button>
           <Popover>
             <PopoverTrigger className='relative p-2 rounded-md hover:bg-muted'>
               <BellIcon className='w-5 h-5' />
@@ -75,7 +68,7 @@ export function SiteHeader() {
                 ))}
               </div>
               <div className='border-t text-xs text-muted-foreground flex justify-between p-3'>
-                <span>Powered by Parsemint</span>
+                <span>Powered by TrimTube</span>
                 <Link href='#' className='hover:underline'>
                   See all changes
                 </Link>

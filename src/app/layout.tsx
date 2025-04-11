@@ -1,6 +1,8 @@
 import { dark } from '@clerk/themes'
 import NextTopLoader from 'nextjs-toploader'
 
+import { Toaster } from '~/components/ui/sonner'
+
 import { PostHogProvider } from './_analytics/provider'
 
 import '~/styles/globals.css'
@@ -80,6 +82,7 @@ export default function RootLayout({
               signInForceRedirectUrl='/'
               signUpForceRedirectUrl='/'
             />
+            <Toaster />
             <TailwindIndicator />
           </body>
         </html>

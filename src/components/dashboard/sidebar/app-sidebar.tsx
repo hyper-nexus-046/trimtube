@@ -2,11 +2,8 @@ import {
   Code,
   FilePlus,
   Headset,
-  HelpCircleIcon,
   LayoutDashboard,
-  ReceiptText,
   Search,
-  SettingsIcon,
   SquarePlus,
   UserCheck,
   UsersRound
@@ -22,7 +19,6 @@ import { Logo } from '~/components/common/header/logo'
 import { NavAccount } from '~/components/dashboard/sidebar/nav-account'
 import { NavGeneral } from '~/components/dashboard/sidebar/nav-general'
 import { NavInternal } from '~/components/dashboard/sidebar/nav-internal'
-import { NavSecondary } from '~/components/dashboard/sidebar/nav-secondary'
 import { NavUser } from '~/components/dashboard/sidebar/nav-user'
 
 const data = {
@@ -72,26 +68,9 @@ const data = {
       icon: UserCheck
     },
     {
-      title: 'Billing',
-      url: '#',
-      icon: ReceiptText
-    },
-    {
       title: 'Support',
       url: '#',
       icon: Headset
-    }
-  ],
-  navSecondary: [
-    {
-      title: 'Settings',
-      url: '#',
-      icon: SettingsIcon
-    },
-    {
-      title: 'Get Help',
-      url: '#',
-      icon: HelpCircleIcon
     }
   ]
 }
@@ -106,7 +85,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <NavGeneral items={data.navGeneral} />
         <NavInternal items={data.internal} />
         <NavAccount items={data.account} />
-        <NavSecondary items={data.navSecondary} className='mt-auto' />
       </SidebarContent>
       <SidebarFooter className='bg-black'>
         <NavUser user={data.user} />
