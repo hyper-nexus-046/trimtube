@@ -16,7 +16,13 @@ const config = {
     ignoreDuringBuilds: true
   },
   images: {
-    domains: ['i.ytimg.com'] // Allow external images from i.ytimg.com
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'i.ytimg.com',
+        pathname: '**'
+      }
+    ]
   },
   async rewrites() {
     return [
