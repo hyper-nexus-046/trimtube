@@ -8,5 +8,17 @@ export default {
   dbCredentials: {
     url: env.DATABASE_URL
   },
-  tablesFilter: ['trimtube_*']
+  out: './supabase/migrations',
+  verbose: true,
+  strict: true,
+  schemaFilter: 'public',
+  entities: {
+    roles: {
+      provider: 'supabase',
+      exclude: ['supabase_auth_admin']
+    }
+  },
+  migrations: {
+    schema: 'public'
+  }
 } satisfies Config

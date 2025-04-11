@@ -19,11 +19,11 @@ import {
   SidebarHeader
 } from '~/components/ui/sidebar'
 import { Logo } from '~/components/common/header/logo'
-import { NavAccount } from '~/components/sidebar/nav-account'
-import { NavGeneral } from '~/components/sidebar/nav-general'
-import { NavInternal } from '~/components/sidebar/nav-internal'
-import { NavSecondary } from '~/components/sidebar/nav-secondary'
-import { NavUser } from '~/components/sidebar/nav-user'
+import { NavAccount } from '~/components/dashboard/sidebar/nav-account'
+import { NavGeneral } from '~/components/dashboard/sidebar/nav-general'
+import { NavInternal } from '~/components/dashboard/sidebar/nav-internal'
+import { NavSecondary } from '~/components/dashboard/sidebar/nav-secondary'
+import { NavUser } from '~/components/dashboard/sidebar/nav-user'
 
 const data = {
   user: {

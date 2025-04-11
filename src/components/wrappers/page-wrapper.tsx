@@ -13,7 +13,7 @@ export const PageWrapper = ({
   showFooter?: boolean
 }) => {
   return (
-    <main>
+    <main className='relative'>
       {children}
       {showCta && <BottomCta />}
       {showFooter && <Footer />}

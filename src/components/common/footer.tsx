@@ -12,10 +12,8 @@ export const Footer = () => {
     >((acc, item) => {
       if (item.type !== 'dropdown') {
         const group = item.group
-        if (!acc[group]) {
-          acc[group] = []
-        }
-        acc[group].push({ title: item.title, href: item.href ?? '#' })
+        acc[group] ??= []
+        acc[group].push({ title: item.title, href: item.href || '#' })
       }
       return acc
     }, {})
@@ -39,10 +37,10 @@ export const Footer = () => {
                 {items.map((item, index) => (
                   <li key={index}>
                     <Link
-                      href={(item as { href: string }).href ?? '#'}
+                      href={item.href}
                       className='block text-[13px] text-muted-foreground hover:text-foreground'
                     >
-                      {(item as { title: string }).title}
+                      {item.title}
                     </Link>
                   </li>
                 ))}

@@ -19,10 +19,10 @@ export const AuthButtons = ({
         asChild
         className={cn(signInClass, 'text-foreground')}
       >
-        <Link href='/signin'>Sign in</Link>
+        <Link href='/sign-in'>Sign in</Link>
       </Button>
       <Button className='px-3' variant='default' asChild>
-        <Link href='/signup'>Get Started</Link>
+        <Link href='/sign-up'>Get Started</Link>
       </Button>
     </div>
   )

@@ -1,3 +1,4 @@
+import { dark } from '@clerk/themes'
 import NextTopLoader from 'nextjs-toploader'
 
 import { PostHogProvider } from './_analytics/provider'
@@ -5,7 +6,7 @@ import { PostHogProvider } from './_analytics/provider'
 import '~/styles/globals.css'
 
 import { type Metadata } from 'next'
-import { ClerkProvider } from '@clerk/nextjs'
+import { ClerkProvider, GoogleOneTap } from '@clerk/nextjs'
 
 import { siteConfig } from '~/config/site'
 import { fontInter, fontMono } from '~/lib/fonts'
@@ -23,7 +24,33 @@ export default function RootLayout({
   modal
 }: Readonly<{ children: React.ReactNode; modal: React.ReactNode }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      appearance={{
+        baseTheme: dark,
+        variables: {
+          colorPrimary: '#954AFC'
+        },
+        elements: {
+          cardBox: 'shadow-none',
+          card: 'bg-card shadow-none',
+          navbar: 'bg-background',
+          headerSubtitle: 'text-muted-foreground',
+          headerTitle: 'text-foreground',
+          socialButtonsBlockButton:
+            'bg-secondary text-secondary-foreground hover:bg-secondary/80',
+          formButtonPrimary:
+            'bg-primary text-primary-foreground hover:bg-primary/90',
+          dividerLine: 'bg-border',
+          dividerText: 'text-muted-foreground',
+          formFieldLabel: 'text-foreground',
+          identityPreviewText: 'text-foreground',
+          formFieldInput: 'bg-background border-input',
+          footerAction: '!bg-transparent bg-card',
+          footerActionText: 'text-foreground',
+          footerActionLink: 'text-primary hover:text-primary/90'
+        }
+      }}
+    >
       <PostHogProvider>
         <html
           lang='en'
@@ -47,6 +74,12 @@ export default function RootLayout({
             />
             {children}
             {modal}
+            <GoogleOneTap
+              cancelOnTapOutside={false}
+              fedCmSupport={true}
+              signInForceRedirectUrl='/'
+              signUpForceRedirectUrl='/'
+            />
             <TailwindIndicator />
           </body>
         </html>

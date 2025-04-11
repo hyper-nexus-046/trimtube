@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { SignedOut } from '@clerk/nextjs'
 import { AlignJustify } from 'lucide-react'
 
 import { siteConfig } from '~/config/site'
@@ -11,7 +12,7 @@ import { ScrollArea } from '~/components/ui/scroll-area'
 
 import { AuthButtons } from './helpers/auth-buttons'
 
-export const SideBar = async () => {
+export const SideBar = () => {
   return (
     <Popover>
       <div className='flex items-center gap-x-2 md:hidden'>
@@ -32,7 +33,9 @@ export const SideBar = async () => {
                 {item.title}
               </Link>
             ))}
-          <AuthButtons className='flex-col mt-4' signInClass='border' />
+          <SignedOut>
+            <AuthButtons className='flex-col mt-4' signInClass='border' />
+          </SignedOut>
         </ScrollArea>
       </PopoverContent>
     </Popover>
